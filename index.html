@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lenguaje con Cass</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind-config.js"></script>
@@ -64,8 +66,9 @@
     <!-- 🟢 Sección Hero -->
 
     <section class="bg-primary-blue text-center py-20 px-6">
-        <h2 class="text-4xl md:text-5xl font-bold mb-4">¡LENGUAJE CON CASS!</h2>
-        <p class="text-lg md:text-xl mb-6">Terapia de lenguaje</p>
+        <h2 class="text-lg md:text-4xl font-bold mb-4">"El lenguaje no solo viene del habla, sino del alma"</h2>
+        <p class="text-lg md:text-xl mb-6"> Fomentar habilidades del lenguaje y habla brindando diversas herramientas de
+            comunicación verbal y no verbal. </p>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#aedff7" fill-opacity="1"
@@ -75,12 +78,13 @@
 
 
     <!-- Sección sobre mi-->
+
     <section id="sobre-mi" class="py-16 px-6 md:px-20 bg-white">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:space-x-12">
 
             <!-- Imagen (opcional) -->
             <div class="w-48 h-48 mb-8 md:mb-0 flex-shrink-0">
-                <img src="tu-foto.jpg" alt="Foto" class="rounded-full object-cover w-full h-full shadow-lg" />
+                <img src="img/Cass.png" alt="Foto" class="rounded-full object-cover w-full shadow-lg" />
             </div>
 
             <!-- Texto -->
@@ -88,10 +92,18 @@
                 <h3 class="text-3xl font-bold text-black bg-primary-pink inline-block px-2 py-1">Sobre mí/Nosotros
                 </h3>
                 <p class="text-gray-700 leading-relaxed">
-                    ¡Hola! Soy [Tu Nombre], [tu profesión o rol] con experiencia en [área o industria].
-                    Me apasiona [menciona tus pasiones o lo que te motiva], y me dedico a ayudar a [tipo de clientes o
-                    usuarios] a lograr [resultado o beneficio].
-                    Cuando no estoy trabajando, disfruto de [hobbies o intereses personales].
+                    ¡Hola! Soy Cassandra García , Licenciada en Comunicación Humana, Terapeuta de lenguaje con Master en
+                    Logopedia en el ámbito educativo (fonoaudiología). <br>
+                    Participante en diversos talleres, cursos diplomados enfocados en el área del lenguaje, aprendizaje
+                    y neurodesarrollo en bebés e infantes. <br>
+                    Participante en dos proyectos editoriales, autora del tema “Avances, Neurociencias aplicadas a los
+                    procesos de comunicación humana,
+                    y su utilidad en la práctica clínica”, en la antología, perspectivas neurointegradoras en
+                    Comunicación humana así como Co-autora en el
+                    proyecto editorial “Enfoque multisistémico Comunicación humana & terapia ocupacional en el espectro
+                    autista con el tema “Sistemas alternos y
+                    Aumentativos de Comunicación como herramienta en el espectro del autismo.
+
                 </p>
             </div>
         </div>
@@ -103,24 +115,70 @@
             d="M0,224L24,229.3C48,235,96,245,144,229.3C192,213,240,171,288,176C336,181,384,235,432,250.7C480,267,528,245,576,202.7C624,160,672,96,720,96C768,96,816,160,864,202.7C912,245,960,267,1008,245.3C1056,224,1104,160,1152,160C1200,160,1248,224,1296,250.7C1344,277,1392,267,1416,261.3L1440,256L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
         </path>
     </svg>
-    <section id="servicios" class="py-16 px-6 md:px-20 bg-primary-yellow">
+    <section id="servicios" class="py-16 px-6 md:px-20">
         <div class="flex justify-center mb-10">
             <h3 class="text-3xl font-bold">
                 Nuestros Servicios
             </h3>
         </div>
+
         <div class="grid gap-10 md:grid-cols-3">
-            <div class="bg-white p-6 shadow rounded">
-                <h4 class="text-xl font-semibold mb-2">Servicio 1</h4>
-                <p>Descripción breve del servicio.</p>
+            <div class="p-6">
+                <div class="bg-primary-yellow collapse-container rounded">
+                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia de lenguaje</button>
+                    <div class="collapse-content">
+                        <p>Desarrolla habilidades tales como la conciencia fonética/fonológica, comprender el entorno
+                            que lo rodea, brindar herramientas necesarias para lograr una adecuada estructura y
+                            coherencia en el acto conversacional con el contexto. </p>
+                    </div>
+                </div>
+
             </div>
-            <div class="bg-white p-6 shadow rounded">
-                <h4 class="text-xl font-semibold mb-2">Servicio 2</h4>
-                <p>Descripción breve del servicio.</p>
+            <div class="p-6">
+                <div class="bg-primary-pink collapse-container rounded">
+                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia del habla</button>
+                    <div class="collapse-content">
+                        <p>Se aborda el punto y modo articulatorio de cada fonema (sonido) del idioma, involucrando
+                            sistemas orgánicos como el AFA (Aparato-Fono-Articulador). </p>
+                    </div>
+                </div>
             </div>
-            <div class="bg-white p-6 shadow rounded">
-                <h4 class="text-xl font-semibold mb-2">Servicio 3</h4>
-                <p>Descripción breve del servicio.</p>
+            <div class="p-6">
+                <div class="bg-primary-blue collapse-container rounded">
+                    <button class="collapse-button" onclick="toggleCollapse(this)">Sistemas de comunicación aumentativos
+                        y alternativos</button>
+                    <div class="collapse-content">
+                        <p>Métodos que ofrecen una diversidad comunicativa a personas que presenta alguna limitante en
+                            la misma. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="bg-primary-green collapse-container rounded">
+                    <button class="collapse-button" onclick="toggleCollapse(this)">Estimulación del lenguaje en
+                        bebés</button>
+                    <div class="collapse-content">
+                        <p>Brindar estrategias que permitan que el ambiente del bebé sea rico a nivel verbal,
+                            desarrollando habilidades prelingüísticas. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="bg-primary-lila collapse-container rounded">
+                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia de aprendizaje</button>
+                    <div class="collapse-content">
+                        <p>Proceso de intervención que pretende desarrollar habilidades cognitivas FE (Funciones
+                            ejecutivas) tales como la atención, memoria, razonamiento etc. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="bg-primary-yellow collapse-container rounded">
+                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia miofuncional</button>
+                    <div class="collapse-content">
+                        <p>Tratamiento que se enfoca en tratar desequilibrios musculares en la zona orofacial. </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -129,6 +187,83 @@
             d="M0,224L24,229.3C48,235,96,245,144,229.3C192,213,240,171,288,176C336,181,384,235,432,250.7C480,267,528,245,576,202.7C624,160,672,96,720,96C768,96,816,160,864,202.7C912,245,960,267,1008,245.3C1056,224,1104,160,1152,160C1200,160,1248,224,1296,250.7C1344,277,1392,267,1416,261.3L1440,256L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z">
         </path>
     </svg>
+
+    <!--SECCION RECURSOS-->
+    <section id="recursos" class="bg-primary-lila py-16 px-6 md:px-20">
+        <div class="flex justify-center mb-10">
+            <h3 class="text-3xl font-bold">Recursos</h3>
+        </div>
+
+        <div class="max-w-6xl mx-auto">
+            <!-- Viewport (oculta el overflow) -->
+            <div id="carousel-viewport" class="overflow-hidden">
+                <!-- Carrusel (contenedor de los slides) -->
+                <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
+                        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+                            <div class="flex items-center justify-between mb-4">
+                                <h5 class="text-lg font-semibold">A comer</h5>
+                                <a href="recursos/A comer .pdf" download target="_blank"
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    Descargar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
+                        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+                            <div class="flex items-center justify-between mb-4">
+                                <h5 class="text-lg font-semibold">Pictogramas</h5>
+                                <!-- <p class="text-sm text-gray-500 mb-4">Guía paso a paso para nuestros usuarios.</p> -->
+                                <a href="recursos/pictogramas.pdf" download target="_blank"
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    Descargar
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
+                        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+                            <div class="flex items-center justify-between mb-4">
+                                <h5 class="text-lg font-semibold">Cuadernillo Fonemas</h5>
+                                <a href="recursos/Cudernillo fonema _s_.pdf" download target="_blank"
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    Descargar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 (opcional, para probar navegación) -->
+                    <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
+                        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+                            <div class="flex items-center justify-between mb-4">
+                                <h5 class="text-lg font-semibold">Cuadernillo aprendizaje Ich</h5>
+                                <!-- <p class="text-sm text-gray-500 mb-4">Más información adicional para clientes.</p> -->
+                                <a href="recursos/CUADERNILLO APRENDIZAJE lch Cass.pdf" download target="_blank"
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    Descargar
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dots -->
+            <div id="carousel-dots" class="flex justify-center mt-6 space-x-2"></div>
+        </div>
+    </section>
+
+
 
     <!-- 🔹 Sección de contacto -->
     <section id="equipo" class="bg-white py-16 px-6 md:px-20">
@@ -140,57 +275,6 @@
 
     </section>
 
-
-    <!-- Sección de recursos-->
-    <!-- 📄 Sección de descarga de documentos -->
-    <section id="recursos" class="bg-primary-lila py-16 px-6 md:px-20">
-
-        <div class="flex justify-center mb-10">
-            <h3 class="text-3xl font-bold">
-                Recursos
-            </h3>
-        </div>
-
-        <div class="max-w-3xl mx-auto space-y-4">
-
-            <!-- Documento 1 -->
-            <div class="flex items-center justify-between bg-white p-4 rounded shadow hover:shadow-lg transition">
-                <div>
-                    <h4 class="text-lg font-semibold">Brochure del servicio</h4>
-                    <p class="text-sm text-gray-500">Información general sobre lo que ofrecemos.</p>
-                </div>
-                <a href="recursos/ejemplo.pdf" download target="_blank"
-                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition">
-                    Descargar
-                </a>
-            </div>
-
-            <!-- Documento 2 -->
-            <div class="flex items-center justify-between bg-white p-4 rounded shadow hover:shadow-lg transition">
-                <div>
-                    <h4 class="text-lg font-semibold">Manual de uso</h4>
-                    <p class="text-sm text-gray-500">Guía paso a paso para nuestros usuarios.</p>
-                </div>
-                <a href="recursos/ejemplo.pdf" download target="_blank"
-                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition">
-                    Descargar
-                </a>
-            </div>
-
-            <!-- Documento 3 -->
-            <div class="flex items-center justify-between bg-white p-4 rounded shadow hover:shadow-lg transition">
-                <div>
-                    <h4 class="text-lg font-semibold">Lista de precios</h4>
-                    <p class="text-sm text-gray-500">Consulta los precios actualizados de nuestros servicios.</p>
-                </div>
-                <a href="recursos/ejemplo.pdf" download target="_blank"
-                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition">
-                    Descargar
-                </a>
-            </div>
-
-        </div>
-    </section>
 
     <!-- ⚫ Footer -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -231,3 +315,65 @@
 </body>
 
 </html>
+
+<script>
+    const carousel = document.getElementById("carousel-track");
+    const dotsContainer = document.getElementById("carousel-dots");
+    const slides = carousel.children;
+    let currentSlide = 0;
+
+    function getVisibleSlides() {
+        const width = window.innerWidth;
+        if (width >= 1024) return 3; // lg
+        if (width >= 640) return 2;  // sm
+        return 1;                    // xs
+    }
+
+    function updateCarousel() {
+        const visibleSlides = getVisibleSlides();
+        const slideWidthPercent = 100 / visibleSlides;
+        const translateX = -slideWidthPercent * currentSlide;
+
+        carousel.style.transform = `translateX(${translateX}%)`;
+
+        // Update dots
+        Array.from(dotsContainer.children).forEach((dot, index) => {
+            dot.classList.toggle("bg-gray-800", index === currentSlide);
+            dot.classList.toggle("bg-gray-400", index !== currentSlide);
+        });
+    }
+
+    function renderDots() {
+        dotsContainer.innerHTML = "";
+        const visibleSlides = getVisibleSlides();
+        const totalDots = Math.ceil(slides.length / visibleSlides);
+
+        for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement("button");
+            dot.className = "w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition";
+            dot.addEventListener("click", () => {
+                currentSlide = i;
+                updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+        }
+
+        updateCarousel();
+    }
+
+    // Initial render
+    renderDots();
+
+    // Re-render on resize
+    window.addEventListener("resize", () => {
+        currentSlide = 0;
+        renderDots();
+    });
+</script>
+
+<script>
+    function toggleCollapse(button) {
+        const content = button.nextElementSibling;
+        content.classList.toggle("open");
+    }
+</script>
