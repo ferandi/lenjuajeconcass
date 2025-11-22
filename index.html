@@ -13,7 +13,7 @@
     <script src="js/tailwind-config.js"></script>
 </head>
 
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-white text-gray-800">
 
     <!-- 🔵 Header con navegación responsive -->
     <header class="bg-white shadow sticky top-0 z-50">
@@ -34,11 +34,11 @@
 
             <!-- Navegación -->
             <nav id="menu"
-                class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6 text-sm font-medium mt-4 md:mt-0">
+                class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6 text-s font-medium mt-4 md:mt-0">
                 <a href="#sobre-mi" class="text-gray-700 hover:bg-primary-pink px-2 py-1 rounded">Sobre mí</a>
                 <a href="#servicios" class="text-gray-700 hover:bg-primary-yellow px-2 py-1 rounded">Servicios</a>
-                <a href="#equipo" class="text-gray-700 hover:bg-primary-green px-2 py-1 rounded">Equipo</a>
                 <a href="#recursos" class="text-gray-700 hover:bg-primary-lila px-2 py-1 rounded">Recursos</a>
+                <a href="#equipo" class="text-gray-700 hover:bg-primary-green px-2 py-1 rounded">Equipo</a>
             </nav>
         </div>
 
@@ -84,12 +84,12 @@
 
             <!-- Imagen (opcional) -->
             <div class="w-48 h-48 mb-8 md:mb-0 flex-shrink-0">
-                <img src="img/Cass.png" alt="Foto" class="rounded-full object-cover w-full shadow-lg" />
+                <img src="img/Cass-nueva.jpg" alt="Foto" class="rounded-full object-cover w-full shadow-lg" />
             </div>
 
             <!-- Texto -->
             <div>
-                <h3 class="text-3xl font-bold text-black bg-primary-pink inline-block px-2 py-1">Sobre mí/Nosotros
+                <h3 class="text-3xl font-bold text-black bg-primary-pink inline-block px-2 py-1">SOBRE MÍ
                 </h3>
                 <p class="text-gray-700 leading-relaxed">
                     ¡Hola! Soy Cassandra García , Licenciada en Comunicación Humana, Terapeuta de lenguaje con Master en
@@ -118,68 +118,96 @@
     <section id="servicios" class="py-16 px-6 md:px-20">
         <div class="flex justify-center mb-10">
             <h3 class="text-3xl font-bold">
-                Nuestros Servicios
+                NUESTROS SERVICIOS
             </h3>
         </div>
 
         <div class="grid gap-10 md:grid-cols-3">
+
+            <!-- 🟡 Terapia de lenguaje -->
             <div class="p-6">
                 <div class="bg-primary-yellow collapse-container rounded">
-                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia de lenguaje</button>
+                    <button class="collapse-button flex flex-col items-center gap-2" onclick="toggleCollapse(this)">
+                        <img src="img/Terapia-Lenguaje.jpg" alt="Terapia de lenguaje" class="w-auto h-80">
+                        Terapia de lenguaje
+                    </button>
                     <div class="collapse-content">
-                        <p>Desarrolla habilidades tales como la conciencia fonética/fonológica, comprender el entorno
+                          <p>Desarrolla habilidades tales como la conciencia fonética/fonológica, comprender el entorno
                             que lo rodea, brindar herramientas necesarias para lograr una adecuada estructura y
                             coherencia en el acto conversacional con el contexto. </p>
                     </div>
                 </div>
-
             </div>
+
+            <!-- 🌸 Terapia del habla -->
             <div class="p-6">
                 <div class="bg-primary-pink collapse-container rounded">
-                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia del habla</button>
+                    <button class="collapse-button flex flex-col items-center gap-2" onclick="toggleCollapse(this)">
+                        <img src="img/Terapia-Habla.jpg" alt="Terapia del habla" class="w-auto h-80">
+                        Terapia del habla
+                    </button>
                     <div class="collapse-content">
                         <p>Se aborda el punto y modo articulatorio de cada fonema (sonido) del idioma, involucrando
                             sistemas orgánicos como el AFA (Aparato-Fono-Articulador). </p>
                     </div>
                 </div>
             </div>
+
+            <!-- 🔵 Sistemas de comunicación Aumentativos -->
             <div class="p-6">
                 <div class="bg-primary-blue collapse-container rounded">
-                    <button class="collapse-button" onclick="toggleCollapse(this)">Sistemas de comunicación aumentativos
-                        y alternativos</button>
+                    <button class="collapse-button flex flex-col items-center gap-2" onclick="toggleCollapse(this)">
+                        <img src="img/Comunicacion-Aumentativo.jpg" alt="CAA" class="w-80 h-80">
+                        Sistemas de Comunicación Aumentativos y Alternativos
+                    </button>
                     <div class="collapse-content">
                         <p>Métodos que ofrecen una diversidad comunicativa a personas que presenta alguna limitante en
                             la misma. </p>
                     </div>
                 </div>
             </div>
+
+            <!-- 🟢 Estimulación del lenguaje en bebés -->
             <div class="p-6">
                 <div class="bg-primary-green collapse-container rounded">
-                    <button class="collapse-button" onclick="toggleCollapse(this)">Estimulación del lenguaje en
-                        bebés</button>
+                    <button class="collapse-button flex flex-col items-center gap-2" onclick="toggleCollapse(this)">
+                        <img src="img/Terapia-bebes.jpg" alt="Estimulación en bebés" class="w-80 h-80">
+                        Estimulación del lenguaje en bebés
+                    </button>
                     <div class="collapse-content">
-                        <p>Brindar estrategias que permitan que el ambiente del bebé sea rico a nivel verbal,
+                       <p>Brindar estrategias que permitan que el ambiente del bebé sea rico a nivel verbal,
                             desarrollando habilidades prelingüísticas. </p>
                     </div>
                 </div>
             </div>
+
+            <!-- 🟣 Terapia de aprendizaje -->
             <div class="p-6">
                 <div class="bg-primary-lila collapse-container rounded">
-                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia de aprendizaje</button>
+                    <button class="collapse-button flex flex-col items-center gap-2" onclick="toggleCollapse(this)">
+                        <img src="img/Terapia-Aprendizaje.jpg" alt="Terapia de aprendizaje" class="w-auto h-80">
+                        Terapia de aprendizaje
+                    </button>
                     <div class="collapse-content">
                         <p>Proceso de intervención que pretende desarrollar habilidades cognitivas FE (Funciones
                             ejecutivas) tales como la atención, memoria, razonamiento etc. </p>
                     </div>
                 </div>
             </div>
+
+            <!-- 🟡 Terapia miofuncional -->
             <div class="p-6">
                 <div class="bg-primary-yellow collapse-container rounded">
-                    <button class="collapse-button" onclick="toggleCollapse(this)">Terapia miofuncional</button>
+                    <button class="collapse-button flex flex-col items-center gap-2" onclick="toggleCollapse(this)">
+                        <img src="icons/miofuncional.svg" alt="Terapia miofuncional" class="w-80 h-80">
+                        Terapia miofuncional
+                    </button>
                     <div class="collapse-content">
-                        <p>Tratamiento que se enfoca en tratar desequilibrios musculares en la zona orofacial. </p>
+                       <p>Tratamiento que se enfoca en tratar desequilibrios musculares en la zona orofacial. </p>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -191,7 +219,7 @@
     <!--SECCION RECURSOS-->
     <section id="recursos" class="bg-primary-lila py-16 px-6 md:px-20">
         <div class="flex justify-center mb-10">
-            <h3 class="text-3xl font-bold">Recursos</h3>
+            <h1 class="text-3xl font-bold">RECURSOS</h1>
         </div>
 
         <div class="max-w-6xl mx-auto">
@@ -203,9 +231,9 @@
                     <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
                         <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
                             <div class="flex items-center justify-between mb-4">
-                                <h5 class="text-lg font-semibold">A comer</h5>
+                                <h2 class="text-m font-semibold">A comer</h2>
                                 <a href="recursos/A comer .pdf" download target="_blank"
-                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-m">
                                     Descargar
                                 </a>
                             </div>
@@ -216,10 +244,10 @@
                     <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
                         <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
                             <div class="flex items-center justify-between mb-4">
-                                <h5 class="text-lg font-semibold">Pictogramas</h5>
+                                <h2 class="text-m font-semibold">Pictogramas</h2>
                                 <!-- <p class="text-sm text-gray-500 mb-4">Guía paso a paso para nuestros usuarios.</p> -->
                                 <a href="recursos/pictogramas.pdf" download target="_blank"
-                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-m">
                                     Descargar
                                 </a>
                             </div>
@@ -231,9 +259,9 @@
                     <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
                         <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
                             <div class="flex items-center justify-between mb-4">
-                                <h5 class="text-lg font-semibold">Cuadernillo Fonemas</h5>
+                                <h2 class="text-m font-semibold">Cuadernillo Fonemas</h2>
                                 <a href="recursos/Cudernillo fonema _s_.pdf" download target="_blank"
-                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-m">
                                     Descargar
                                 </a>
                             </div>
@@ -245,10 +273,10 @@
                     <div class="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-2">
                         <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
                             <div class="flex items-center justify-between mb-4">
-                                <h5 class="text-lg font-semibold">Cuadernillo aprendizaje Ich</h5>
+                                <h2 class="text-m font-semibold">Cuadernillo aprendizaje Ich</h2>
                                 <!-- <p class="text-sm text-gray-500 mb-4">Más información adicional para clientes.</p> -->
                                 <a href="recursos/CUADERNILLO APRENDIZAJE lch Cass.pdf" download target="_blank"
-                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-sm">
+                                    class="bg-primary-yellow font-bold px-4 py-2 rounded hover:bg-primary-blue transition text-m">
                                     Descargar
                                 </a>
                             </div>
@@ -269,7 +297,7 @@
     <section id="equipo" class="bg-white py-16 px-6 md:px-20">
         <div class="flex justify-center mb-10">
             <h3 class="text-3xl font-bold bg-primary-green inline-block px-2 py-1 text-center">
-                Información del equipo
+                INFORMACIÓN DEL EQUIPO
             </h3>
         </div>
 
@@ -284,7 +312,7 @@
     </svg>
 
     <footer class="bg-primary-blue font-bold text-white font-bold text-center py-6">
-        <p>&copy; Lenguaje Con Cass.</p>
+        <p>&copy; LENGUAJE CON CASS.</p>
         <div class="flex justify-center space-x-6">
             <!-- Facebook -->
             <a href="https://www.facebook.com/LCHterapiaXCass/" target="_blank" aria-label="Facebook"

@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Marykate-Regular';
+  src: url('../fonts/Marykate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Marykate-Regular', sans-serif !important;
+  font-size: 1.5rem;
+}
+
 .bg-svg-pattern {
   background-image: url('img/wave.svg');
 }
@@ -13,7 +25,7 @@
   width: 100%;
   text-align: left;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 5px;
