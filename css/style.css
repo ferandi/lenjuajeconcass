@@ -1,19 +1,76 @@
-@font-face {
+/* @font-face {
   font-family: 'Marykate-Regular';
   src: url('../fonts/Marykate-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Marykate-Regular';
+  src: url('../fonts/Marykate-Regular.woff2') format('woff2'),
+       url('../fonts/Marykate-Regular.woff') format('woff'),
+       url('../fonts/Marykate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* SOLO caracteres U+0000–U+007F (Basic Latin) — sin tildes, sin ñ */
+  unicode-range: U+0000-007F;
 }
 
+/* Luego tus fallbacks habituales (estas sí cubren tildes) */
 body {
-  font-family: 'Marykate-Regular', sans-serif !important;
+  font-family: 'Marykate-Regular', 'Segoe UI', 'Noto Sans', sans-serif;
   font-size: 1.5rem;
 }
 
-.bg-svg-pattern {
-  background-image: url('img/wave.svg');
+/* body {
+  font-family: 'Marykate-Regular', 'Segoe Script', 'Segoe UI', sans-serif !important;
+  font-size: 1.5rem;
+} */
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px; /* O el tamaño que necesites */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  overflow: hidden;
 }
 
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/banner-ia.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4; /* 👉 Ajusta la opacidad del background aquí */
+  z-index: 1;
+}
+
+.banner * {
+  position: relative;
+  z-index: 2; /* 👉 Esto mantiene el texto encima del fondo */
+}
+.bg-image {
+  background-image: url('../img/banner-ia.png');
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+}
 .space {
   display: block;
 }
